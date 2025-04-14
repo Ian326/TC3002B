@@ -1,5 +1,5 @@
-# Prediccion de Ranking en TETR.IO
-## Descripcion del Proyecto 📝
+# Predicción de Ranking en TETR.IO
+## Descripción del Proyecto 📝
 En este documento se proporciona una visión general del proyecto "Predicción del ranking de los jugadores de tetr.io" en el cuál se utilizan redes neuronales y un conjunto de datos con información compilada de la API de [tetr.io](https://tetr-io.translate.goog/about/api/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc).
 
 ## Contenido 📚
@@ -61,7 +61,7 @@ Acc vs Epoch            | Loss vs Epoch
 :-------------------------:|:-------------------------:
 ![image](https://github.com/user-attachments/assets/2ff74f07-2f67-47ab-93cb-261fa34df099) | ![image](https://github.com/user-attachments/assets/7dbcf704-97a2-4b68-95c0-9783c71d6a9f)
 
-En cuanto a las métricas de clasificación, el precision, recall y F1-score para cada clase se calcularon utilizando el informe de clasificación. Estas métricas muestran un desempeño variable entre las clases, con algunas categorías alcanzando valores altos y otras más bajas, lo que podría deberse a un desbalance en los datos. La matriz de confusión revela que el modelo predice correctamente la mayoría de las clases, aunque existen confusiones entre algunas categorías específicas. Esto podría indicar que ciertas clases tienen características similares o que los datos de entrenamiento no son suficientemente representativos para esas categorías. En general, los resultados son prometedores, pero podrían mejorarse con técnicas como el ajuste de hiperparámetros o el aumento de datos.
+En cuanto a las métricas de clasificación, el precision, recall y F1-score para cada clase se calcularon utilizando el informe de clasificación. Estas métricas muestran un desempeño variable entre las clases, con algunas categorías alcanzando valores altos y otras más bajas, lo que podría deberse a un desbalance en los datos. La matriz de confusión revela que el modelo predice correctamente la mayoría de las clases, aunque existen confusiones entre algunas categorías específicas. Esto podría indicar que ciertas clases tienen características similares (especialmente en los rangos mas altos del competitivo multijugador). En general, los resultados son prometedores, pero podrían mejorarse con técnicas como el ajuste de hiperparámetros o el aumento de datos.
 <p align="center">
   <img width="460" height="300" src="https://github.com/user-attachments/assets/4a8f8544-111a-4702-8884-54c8423c7470">
 </p>
