@@ -36,6 +36,7 @@ En este documento se proporciona una visión general del proyecto "Predicción d
 
 ## Objetivo 🎯
 El objetivo principal de este proyecto es la predicción del nivel de un jugador de tetris basado en sus estadísticas de juego, sin tomar en cuenta el ranking otorgado por el mismo juego; pudiendo asi tener un mejor entendimiento de su nivel "real" dentro del juego, sin estar limitado por factores como una mala racha, o el nivel promedio de sus oponentes.
+
 Si bien, el modelo desarrollado mediante el uso de redes neuronales, no presenta una contribución significativa en materia de investigación, puede verse como una alternativa a los métodos tradicionales del calculo del poder de un jugador dentro de juegos competitivos como lo es el sistema de ELO que se usa mayormente.
 
 ## Literatura consultada 📖
@@ -53,16 +54,29 @@ La capa de salida utiliza la función de activación **Softmax**, que convierte 
 
 El modelo se compila utilizando el optimizador Adam, que es una variante del descenso de gradiente estocástico que ajusta dinámicamente las tasas de aprendizaje para cada parámetro. La función de pérdida utilizada es categorical_crossentropy, que es adecuada para problemas de clasificación multiclase. Además, la métrica de evaluación seleccionada es la exactitud (accuracy), que mide qué tan bien el modelo clasifica correctamente las instancias en el conjunto de datos. Esta arquitectura es simple pero efectiva para problemas de clasificación supervisada con datos tabulares.
 
-## Resultados y evaluacion inicial
+## Resultados y evaluacion inicial 💹
 
-## Resultados mejorados
+El modelo entrenado alcanzó una exactitud (accuracy) en el conjunto de prueba de aproximadamente `84.49%`, mientras que en el conjunto de entrenamiento logró una exactitud de `87.93%`, lo que indica que el modelo generaliza bien y no presenta un sobreajuste significativo. El valor de pérdida (loss) en el conjunto de prueba fue de `0.4839`, mientras que en el conjunto de entrenamiento fue de `0.3776`, lo que sugiere que el modelo logró minimizar la función de pérdida de manera efectiva durante el entrenamiento. Además, el gráfico de precisión y pérdida por épocas muestra una convergencia estable, lo que confirma que el modelo fue entrenado correctamente.
+Acc vs Epoch            | Loss vs Epoch
+:-------------------------:|:-------------------------:
+![image](https://github.com/user-attachments/assets/2ff74f07-2f67-47ab-93cb-261fa34df099) | ![image](https://github.com/user-attachments/assets/7dbcf704-97a2-4b68-95c0-9783c71d6a9f)
+
+En cuanto a las métricas de clasificación, el precision, recall y F1-score para cada clase se calcularon utilizando el informe de clasificación. Estas métricas muestran un desempeño variable entre las clases, con algunas categorías alcanzando valores altos y otras más bajas, lo que podría deberse a un desbalance en los datos. La matriz de confusión revela que el modelo predice correctamente la mayoría de las clases, aunque existen confusiones entre algunas categorías específicas. Esto podría indicar que ciertas clases tienen características similares o que los datos de entrenamiento no son suficientemente representativos para esas categorías. En general, los resultados son prometedores, pero podrían mejorarse con técnicas como el ajuste de hiperparámetros o el aumento de datos.
+<p align="center">
+  <img width="460" height="300" src="https://github.com/user-attachments/assets/4a8f8544-111a-4702-8884-54c8423c7470">
+</p>
+
+![image](https://github.com/user-attachments/assets/522126a4-8553-469b-bbdd-de33fc4b32b8)
+
+
+## Resultados mejorados   
 
 ## Referencias
-[Karlsson, E., & Jansson, A. (2022). Neural networks for standardizing ratings in League of Legends (Bachelor's thesis, Örebro University). Örebro University.](https://www.diva-portal.org/smash/get/diva2:1718213/FULLTEXT01.pdf)
+[1] [Karlsson, E., & Jansson, A. (2022). Neural networks for standardizing ratings in League of Legends (Bachelor's thesis, Örebro University). Örebro University.](https://www.diva-portal.org/smash/get/diva2:1718213/FULLTEXT01.pdf)
 
-[Sen, D., Roy, R. K., Majumdar, R., Chatterjee, K., & Ganguly, D. (n.d.). Prediction of the final rank of players in PUBG with the optimal number of features [Conference paper or manuscript]. Departments of Computer Science and Engineering, University of Calcutta & Government College of Engineering and Leather Technology.](https://arxiv.org/pdf/2107.09016)
+[2] [Sen, D., Roy, R. K., Majumdar, R., Chatterjee, K., & Ganguly, D. (n.d.). Prediction of the final rank of players in PUBG with the optimal number of features [Conference paper or manuscript]. Departments of Computer Science and Engineering, University of Calcutta & Government College of Engineering and Leather Technology.](https://arxiv.org/pdf/2107.09016)
 
-[Zhang, C., Wang, K., Chen, H., Fan, G., Jie, Y., Wen, L., & Zheng, B. (2022, October). QuickSkill: Novice skill estimation in online multiplayer games. In Proceedings of the 31st ACM International Conference on Information and Knowledge Management (CIKM '22) (pp. 4149–4158). ACM. https://doi.org/10.1145/3511808.3550700](https://arxiv.org/pdf/2208.07704)
+[3] [Zhang, C., Wang, K., Chen, H., Fan, G., Jie, Y., Wen, L., & Zheng, B. (2022, October). QuickSkill: Novice skill estimation in online multiplayer games. In Proceedings of the 31st ACM International Conference on Information and Knowledge Management (CIKM '22) (pp. 4149–4158). ACM. https://doi.org/10.1145/3511808.3550700](https://arxiv.org/pdf/2208.07704)
 
 ## Uso
 Execute the `TetrisRankPrediction.ipynb` notebook under the `Code` folder. 
