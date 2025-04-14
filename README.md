@@ -69,7 +69,25 @@ En cuanto a las métricas de clasificación, el precision, recall y F1-score par
 ![image](https://github.com/user-attachments/assets/522126a4-8553-469b-bbdd-de33fc4b32b8)
 
 
-## Resultados mejorados   
+## Resultados mejorados 🚀
+Se realizaron varias mejoras al modelo para optimizar su desempeño. En primer lugar, se implementó un escalamiento de los datos utilizando la técnica de `MinMaxScaler`, que normaliza los valores de las características entre 0 y 1. Esto permitió que el modelo procesara los datos de manera más eficiente, reduciendo la influencia de valores extremos y mejorando la convergencia durante el entrenamiento. Este paso es crucial en redes neuronales, ya que evita que las características con valores más grandes dominen el proceso de aprendizaje.
+
+Además, se incrementó el número de neuronas en las capas ocultas del modelo. Originalmente, cada capa oculta tenía `64 neuronas` , pero en la versión mejorada se aumentó a `96 neuronas por capa`. Este cambio permitió al modelo capturar patrones más complejos en los datos, lo que resultó en un mejor ajuste a las características del conjunto de entrenamiento y una mayor capacidad de generalización en el conjunto de prueba. Este aumento en la capacidad del modelo fue clave para mejorar su desempeño.
+
+Los resultados muestran una mejora significativa en las métricas de desempeño. La exactitud (accuracy) en el conjunto de entrenamiento aumentó de `84.49%` a `94.88%`, mientras que la pérdida (loss) disminuyó de `0.4839` a `0.1207`, lo que indica que el modelo aprendió de manera más efectiva. En el conjunto de prueba, la exactitud pasó de `87.93%` a `94.65%`, y la pérdida se redujo de `0.3776` a `0.1312`, lo que demuestra que el modelo generaliza mejor y es menos propenso a errores en datos no vistos.
+Acc vs Epoch            | Loss vs Epoch
+:-------------------------:|:-------------------------:
+![image](https://github.com/user-attachments/assets/1e50fd27-c4b0-4d77-91b9-04bcb902cee0) | ![image](https://github.com/user-attachments/assets/c2627b40-4a2b-4b8b-9d5b-d7a439f0ae13)
+
+
+Finalmente, la matriz de confusión y las métricas como precision, recall y F1-score también mostraron mejoras notables. Las confusiones entre clases disminuyeron, y las métricas de clasificación reflejan un desempeño más consistente en todas las categorías. Esto sugiere que el modelo ahora es más robusto y capaz de distinguir entre las diferentes clases con mayor precisión, lo que lo hace más confiable para predecir el rango de los jugadores en Tetr.io.
+<p align="center">
+  <img width="460" height="300" src="https://github.com/user-attachments/assets/2df0ac88-f513-49bc-b50e-510b3c2b9f6d">
+</p>
+
+![image](https://github.com/user-attachments/assets/82c10bcf-83b8-4fd7-a294-c31a7fd09a02)
+
+
 
 ## Referencias
 [1] [Karlsson, E., & Jansson, A. (2022). Neural networks for standardizing ratings in League of Legends (Bachelor's thesis, Örebro University). Örebro University.](https://www.diva-portal.org/smash/get/diva2:1718213/FULLTEXT01.pdf)
