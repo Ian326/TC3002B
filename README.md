@@ -92,11 +92,9 @@ Finalmente, la matriz de confusión y las métricas como precision, recall y F1-
 ## Referencias
 [1] [Karlsson, E., & Jansson, A. (2022). Neural networks for standardizing ratings in League of Legends (Bachelor's thesis, Örebro University). Örebro University.](https://www.diva-portal.org/smash/get/diva2:1718213/FULLTEXT01.pdf)
 
-[2] [Sen, D., Roy, R. K., Majumdar, R., Chatterjee, K., & Ganguly, D. (n.d.). Prediction of the final rank of players in PUBG with the optimal number of features [Conference paper or manuscript]. Departments of Computer Science and Engineering, University of Calcutta & Government College of Engineering and Leather Technology.](https://arxiv.org/pdf/2107.09016)
+[2] [Zhang, C., Wang, K., Chen, H., Fan, G., Jie, Y., Wen, L., & Zheng, B. (2022, October). QuickSkill: Novice skill estimation in online multiplayer games. In Proceedings of the 31st ACM International Conference on Information and Knowledge Management (CIKM '22) (pp. 4149–4158). ACM. https://doi.org/10.1145/3511808.3550700](https://www.researchgate.net/publication/362728596_QuickSkill_Novice_Skill_Estimation_in_Online_Multiplayer_Games)
 
-[3] [Zhang, C., Wang, K., Chen, H., Fan, G., Jie, Y., Wen, L., & Zheng, B. (2022, October). QuickSkill: Novice skill estimation in online multiplayer games. In Proceedings of the 31st ACM International Conference on Information and Knowledge Management (CIKM '22) (pp. 4149–4158). ACM. https://doi.org/10.1145/3511808.3550700](https://arxiv.org/pdf/2208.07704)
-
-## Uso
+## Use
 Execute the `TetrisRankPrediction.ipynb` notebook under the `Code` folder. 
 
 If you want to test it on the cloud, download the dataset required (`tl-data-09-2023.csv`) under the `content` folder and upload it directly into the Google Colab 'Runtime File Folder'
